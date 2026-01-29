@@ -1,0 +1,198 @@
+.category-filter {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  padding: 12px 30px;
+  border: 2px solid var(--primary);
+  background: white;
+  color: var(--secondary);
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: capitalize;
+}
+
+.category-btn:hover, .category-btn.active {
+  background: var(--primary);
+  color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+.foods-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.food-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+}
+
+.food-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+.food-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.food-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.food-card:hover .food-image img {
+  transform: scale(1.1);
+}
+
+.food-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 100%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 25px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.food-card:hover .food-overlay {
+  opacity: 1;
+}
+
+.food-overlay .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.food-info {
+  padding: 25px;
+}
+
+.food-info h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: var(--secondary);
+}
+
+.food-description {
+  color: #666;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+.food-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.food-price {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.food-category {
+  background: var(--light);
+  padding: 5px 15px;
+  border-radius: 15px;
+  font-size: 12px;
+  color: var(--secondary);
+  text-transform: capitalize;
+}
+
+.loading, .empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 20px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .foods-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Loading va Error States */
+.loading-container, .error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 40px;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-container p, .error-container p {
+  font-size: 18px;
+  color: #666;
+  margin-top: 15px;
+}
+
+.error-container i {
+  font-size: 60px;
+  color: #e74c3c;
+  margin-bottom: 20px;
+}
+
+.error-container .btn {
+  margin-top: 20px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 80px 20px;
+  background: #f8f9fa;
+  border-radius: 20px;
+  margin-top: 40px;
+}
+
+.empty-state i {
+  font-size: 80px;
+  color: var(--primary);
+  opacity: 0.5;
+  margin-bottom: 20px;
+}
+
+.empty-state p {
+  font-size: 20px;
+  color: #666;
+}

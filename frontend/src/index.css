@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f8f9fa;
+  color: #333;
+}
+
+:root {
+  --primary: #d4af37;
+  --secondary: #1a1a1a;
+  --accent: #8b7355;
+  --light: #f8f9fa;
+  --dark: #212529;
+}
