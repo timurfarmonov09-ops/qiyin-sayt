@@ -1,199 +1,237 @@
 # 🍽️ Premium Restaurant Web Application
 
-Zamonaviy va professional restaurant web application - to'liq responsive, premium dizayn va real biznes uchun tayyor loyiha.
+[![GitHub](https://img.shields.io/badge/GitHub-qiyin--sayt-blue?logo=github)](https://github.com/timurfarmonov09-ops/qiyin-sayt)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Node.js](https://img.shields.io/badge/Node.js-18+-green.svg)](https://nodejs.org/)
+[![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
 
-![Restaurant App](https://img.shields.io/badge/Status-Production%20Ready-success)
-![React](https://img.shields.io/badge/React-18.2.0-blue)
-![Node.js](https://img.shields.io/badge/Node.js-Express-green)
-![MongoDB](https://img.shields.io/badge/Database-MongoDB-brightgreen)
+Zamonaviy va professional darajadagi restaurant web application. To'liq funksional buyurtma tizimi va admin panel bilan.
 
-## ✨ Asosiy Xususiyatlar
+## 🌟 Asosiy Xususiyatlar
 
-### 🎨 Premium Dizayn
-- ✅ Zamonaviy va professional UI/UX
-- ✅ Silliq animatsiyalar (fade-in, slide-in, scale-in)
-- ✅ Premium rang palitrasi (oltin, qora, jigarrang)
-- ✅ To'liq responsive (mobil, planshet, desktop)
-- ✅ Hover effektlari va transitions
+### Mijoz Uchun:
+- ✅ **24 ta ovqat** - 7 kategoriyada (Milliy taomlar, Fast food, Salatlar, va boshqalar)
+- ✅ **18 ta ichimlik** - Issiq va sovuq ichimliklar
+- ✅ **Savat tizimi** - Oson buyurtma berish
+- ✅ **Buyurtma formasi** - Ism, telefon, manzil, izoh
+- ✅ **Professional dizayn** - Premium UI/UX
+- ✅ **To'liq responsive** - Mobil, planshet, desktop
 
-### 🏠 Foydalanuvchi Qismi
-- ✅ Hero banner va call-to-action
-- ✅ Ovqatlar bo'limi (kategoriyalarga bo'lingan)
-- ✅ Ichimliklar bo'limi (issiq/sovuq)
-- ✅ Biz haqimizda (storytelling uslubida)
-- ✅ Savat funksiyasi
-- ✅ Buyurtma berish tizimi
+### Admin Uchun:
+- ✅ **Xavfsiz login** - JWT autentifikatsiya
+- ✅ **Buyurtmalarni ko'rish** - To'liq mijoz ma'lumotlari
+- ✅ **Status boshqaruvi** - 5 xil status
+- ✅ **CRUD operatsiyalar** - Ovqat va ichimliklar boshqaruvi
+- ✅ **Real-time yangilanish** - Darhol ko'rinadi
 
-### 👨‍💼 Admin Panel
-- ✅ Xavfsiz login (JWT authentication)
-- ✅ Ovqatlar CRUD (qo'shish, tahrirlash, o'chirish)
-- ✅ Ichimliklar CRUD
-- ✅ Buyurtmalarni ko'rish va boshqarish
-- ✅ Status yangilash (pending, confirmed, preparing, delivered, cancelled)
+## 🚀 Tezkor Boshlash
 
-## 🚀 Tezkor Ishga Tushirish
+### 1. Repository ni Clone Qiling
+```bash
+git clone https://github.com/timurfarmonov09-ops/qiyin-sayt.git
+cd qiyin-sayt
+```
 
-### Windows uchun (Avtomatik):
+### 2. Ishga Tushiring
+
+#### Windows:
 ```bash
 START.bat
 ```
 
-### Manual (Barcha platformalar):
+#### Linux/Mac:
+```bash
+chmod +x start.sh
+./start.sh
+```
 
-1. **MongoDB ishga tushiring**
-2. **Backend:**
+### 3. Saytni Oching
+- **Frontend:** http://localhost:3000
+- **Backend:** http://localhost:5000
+- **Admin Panel:** http://localhost:3000/admin/login
+
+## 🔐 Admin Login
+
+```
+Email: admin@restaurant.uz
+Parol: admin123
+```
+
+## 📋 Buyurtma Berish
+
+1. http://localhost:3000 ga o'ting
+2. Ovqat yoki ichimlik tanlang
+3. "Savatchaga qo'shish" tugmasini bosing
+4. Savat ikonkasiga bosing
+5. Ma'lumotlarni kiriting va buyurtma bering
+
+## 👨‍💼 Admin Panel
+
+1. Bosh sahifada "Admin Panelga Kirish" tugmasini bosing
+2. Login qiling (yuqoridagi ma'lumotlar bilan)
+3. "Buyurtmalar" tabiga o'ting
+4. Barcha buyurtmalarni ko'ring va statusni o'zgartiring
+
+## 🛠️ Texnologiyalar
+
+### Frontend:
+- React 18
+- React Router DOM
+- Axios
+- Font Awesome 6.4.0
+- CSS3 (Animations, Gradients)
+
+### Backend:
+- Node.js
+- Express.js
+- MongoDB (ixtiyoriy - in-memory fallback)
+- JWT Authentication
+- Bcrypt.js
+
+## 📁 Loyiha Strukturasi
+
+```
+qiyin-sayt/
+├── backend/
+│   ├── models/          # MongoDB models
+│   ├── routes/          # API routes
+│   ├── middleware/      # JWT auth
+│   ├── seedData.js      # Sample data (24 foods + 18 drinks)
+│   └── server.js        # Express server
+├── frontend/
+│   ├── public/
+│   └── src/
+│       ├── components/  # Navbar
+│       └── pages/       # Home, Foods, Drinks, Cart, Admin
+├── START.bat            # Windows start script
+├── start.sh             # Linux/Mac start script
+└── README.md
+```
+
+## 📚 Documentation
+
+- **[QUICK_START.md](QUICK_START.md)** - Tezkor boshlash qo'llanmasi
+- **[ADMIN_KIRISH_QOLLANMA.md](ADMIN_KIRISH_QOLLANMA.md)** - Admin panel qo'llanmasi
+- **[TEST_ORDER_SYSTEM.md](TEST_ORDER_SYSTEM.md)** - Buyurtma tizimi test
+- **[SETUP.md](SETUP.md)** - Batafsil o'rnatish
+- **[FEATURES.md](FEATURES.md)** - Barcha xususiyatlar
+- **[DEPLOYMENT.md](DEPLOYMENT.md)** - Deploy qilish
+
+## 🎨 Screenshots
+
+### Bosh Sahifa
+- Hero banner
+- Ovqatlar preview (6 ta)
+- Ichimliklar preview (6 ta)
+- Admin kirish bo'limi
+
+### Ovqatlar Sahifasi
+- 24 ta ovqat
+- 7 kategoriya
+- Professional rasmlar
+- Savatchaga qo'shish
+
+### Admin Panel
+- Buyurtmalarni ko'rish
+- Mijoz ma'lumotlari
+- Status boshqaruvi
+- CRUD operatsiyalar
+
+## 🔧 O'rnatish (Manual)
+
+### Backend:
 ```bash
 cd backend
 npm install
-npm start
+node server.js
 ```
 
-3. **Frontend:**
+### Frontend:
 ```bash
 cd frontend
 npm install
 npm start
 ```
 
-4. **Admin yaratish:**
-```bash
-# Postman yoki browser orqali:
-POST http://localhost:5000/api/auth/create-admin
-```
-
-## 🔐 Admin Panel
-
-- **URL:** http://localhost:3000/admin/login
-- **Email:** admin@restaurant.uz
-- **Parol:** admin123
-
-## 📁 Loyiha Strukturasi
-
-```
-restaurant-app/
-├── backend/          # Node.js + Express API
-│   ├── models/       # MongoDB models
-│   ├── routes/       # API endpoints
-│   └── middleware/   # Auth middleware
-├── frontend/         # React application
-│   ├── components/   # Reusable components
-│   └── pages/        # Page components
-└── docs/             # Hujjatlar
-```
-
-## 🛠️ Texnologiyalar
-
-### Frontend
-- **React 18** - UI library
-- **React Router v6** - Navigation
-- **Axios** - HTTP client
-- **CSS3** - Styling (Flexbox, Grid, Animations)
-
-### Backend
-- **Node.js** - Runtime
-- **Express.js** - Web framework
-- **MongoDB** - Database
-- **Mongoose** - ODM
-- **JWT** - Authentication
-- **bcryptjs** - Password hashing
-
-## 📚 Hujjatlar
-
-- [FEATURES.md](FEATURES.md) - Barcha xususiyatlar batafsil
-- [SETUP.md](SETUP.md) - Qadamma-qadam o'rnatish qo'llanmasi
-- [DEPLOYMENT.md](DEPLOYMENT.md) - Production ga chiqarish
-- [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) - Loyiha strukturasi
-
 ## 🌐 API Endpoints
 
-### Public
-- `GET /api/foods` - Barcha ovqatlar
-- `GET /api/drinks` - Barcha ichimliklar
-- `POST /api/orders` - Yangi buyurtma
-- `POST /api/auth/login` - Admin login
-
-### Protected (Admin only)
-- `POST /api/foods` - Ovqat qo'shish
-- `PUT /api/foods/:id` - Ovqat yangilash
-- `DELETE /api/foods/:id` - Ovqat o'chirish
-- `GET /api/orders` - Barcha buyurtmalar
-- `PUT /api/orders/:id` - Status yangilash
-
-## 🎯 Real Biznes Uchun Tayyor
-
-- ✅ Production-ready kod
-- ✅ Scalable architecture
-- ✅ Security best practices
-- ✅ Error handling
-- ✅ Responsive design
-- ✅ Professional UI/UX
-- ✅ Easy to maintain
-- ✅ Well documented
-
-## 🔒 Xavfsizlik
-
-- JWT token authentication
-- Password hashing (bcryptjs)
-- Protected admin routes
-- CORS sozlamalari
-- Input validation
-- Error handling
-
-## 📱 Responsive Design
-
-- ✅ Mobile (320px+)
-- ✅ Tablet (768px+)
-- ✅ Desktop (1024px+)
-- ✅ Large screens (1440px+)
-
-## 🚀 Deployment
-
-### Heroku (Backend)
-```bash
-heroku create your-restaurant-api
-heroku config:set MONGODB_URI="your-uri"
-git push heroku master
+```
+GET    /api/foods           # Barcha ovqatlar
+GET    /api/drinks          # Barcha ichimliklar
+POST   /api/orders          # Buyurtma yaratish
+GET    /api/orders          # Buyurtmalarni olish (admin)
+PUT    /api/orders/:id      # Status yangilash (admin)
+POST   /api/auth/login      # Admin login
 ```
 
-### Vercel (Frontend)
-```bash
-vercel --prod
-```
+## 💾 Ma'lumotlar
 
-Batafsil: [DEPLOYMENT.md](DEPLOYMENT.md)
+### MongoDB Mavjud Bo'lsa:
+- Database da saqlanadi
+- Doimiy saqlash
+
+### MongoDB Yo'q Bo'lsa:
+- In-memory storage
+- Sample data (24 foods + 18 drinks)
+- Test uchun yetarli
+
+## 🎯 Xususiyatlar
+
+### Dizayn:
+- ✅ Professional gradient backgrounds
+- ✅ Font Awesome ikonkalar
+- ✅ Smooth animations
+- ✅ Hover effects
+- ✅ Responsive dizayn
+
+### Funksionallik:
+- ✅ Buyurtma tizimi
+- ✅ Savat boshqaruvi
+- ✅ Admin panel
+- ✅ Status boshqaruvi
+- ✅ CRUD operatsiyalar
+
+### Xavfsizlik:
+- ✅ JWT autentifikatsiya
+- ✅ Bcrypt password hashing
+- ✅ CORS sozlangan
+- ✅ Admin-only routes
+
+## 📱 Responsive
+
+- ✅ **Desktop** (1200px+) - To'liq funksional
+- ✅ **Tablet** (768px - 1199px) - Moslashtirilgan
+- ✅ **Mobil** (< 768px) - To'liq responsive
 
 ## 🤝 Contributing
 
-1. Fork qiling
-2. Feature branch yarating (`git checkout -b feature/AmazingFeature`)
-3. Commit qiling (`git commit -m 'Add some AmazingFeature'`)
-4. Push qiling (`git push origin feature/AmazingFeature`)
-5. Pull Request oching
+Contributions are welcome! Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details.
 
-## 📝 License
+## 📄 License
 
-MIT License - [LICENSE](LICENSE) faylini ko'ring
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👨‍💻 Muallif
+## 👥 Contributors
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+See [CONTRIBUTORS.md](CONTRIBUTORS.md) for the list of contributors.
 
-## 🙏 Minnatdorchilik
+## 📞 Support
 
-- React jamoasiga
-- MongoDB jamoasiga
-- Express.js jamoasiga
-- Open source community
+Agar savollar yoki muammolar bo'lsa:
+- GitHub Issues: [Create an issue](https://github.com/timurfarmonov09-ops/qiyin-sayt/issues)
+- Documentation: [Docs folder](/)
 
-## 📞 Yordam
+## 🎉 Acknowledgments
 
-Muammolar yuzaga kelsa:
-1. [Issues](https://github.com/yourusername/restaurant-app/issues) bo'limida qidiring
-2. Yangi issue oching
-3. [SETUP.md](SETUP.md) ni qayta o'qing
+- Font Awesome for icons
+- Unsplash for images
+- React community
+- Node.js community
 
 ---
 
-⭐ Agar loyiha yoqsa, star bering!
+**Made with ❤️ for restaurants**
+
+**Repository:** https://github.com/timurfarmonov09-ops/qiyin-sayt
+
+**Status:** ✅ Production Ready
